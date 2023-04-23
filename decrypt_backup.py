@@ -391,7 +391,9 @@ def main() -> None:
     backup_file_size = args.backup_file.tell()
     args.backup_file.seek(0)
 
-    pwdFile = open(args.password_list, 'r')
+    
+
+    pwdFile = open(args.password_list, 'r', encoding='latin-1')
     Lines = pwdFile.readlines()
     completed = False
     for line in Lines:
